@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>DumpReader</AssemblyName>
+    <RootNamespace>DumpReader</RootNamespace>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <ProjectGuid>{7F1C2D54-9A3B-4C6E-8D21-5B0E9F3A4C17}</ProjectGuid>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- 用于输出 PNG 预览；不需要图片时可自行移除 -->
+    <PackageReference Include="SkiaSharp" Version="4.153.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 默认配色：取自游戏贴图 textures/blocks 的平均色，可用 palette 参数覆盖 -->
+    <None Update="block-colors.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
